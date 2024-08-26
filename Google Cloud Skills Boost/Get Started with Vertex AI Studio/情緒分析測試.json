@@ -1,0 +1,62 @@
+{
+  "title": "情緒分析測試",
+  "description": "",
+  "parameters": {
+    "groundingPromptConfig": {
+      "disabled": true,
+      "groundingConfig": {
+        "sources": [
+          {
+            "type": "VERTEX_AI_SEARCH"
+          }
+        ]
+      }
+    },
+    "stopSequences": [],
+    "temperature": 1.5,
+    "tokenLimits": 1024,
+    "topP": 0.95
+  },
+  "inputPrefixes": [
+    ""
+  ],
+  "outputPrefixes": [
+    ""
+  ],
+  "examples": [
+    {
+      "inputs": [
+        "A well-made and entertaining film"
+      ],
+      "outputs": [
+        "positive"
+      ]
+    },
+    {
+      "inputs": [
+        "I fell asleep after 10 minutes"
+      ],
+      "outputs": [
+        "negative"
+      ]
+    },
+    {
+      "inputs": [
+        "The movie was ok"
+      ],
+      "outputs": [
+        "neutral"
+      ]
+    }
+  ],
+  "testData": [
+    {
+      "inputs": [
+        "It was a time well spent!"
+      ]
+    }
+  ],
+  "type": "structured",
+  "context": "",
+  "model": "gemini-1.5-flash-001"
+}
